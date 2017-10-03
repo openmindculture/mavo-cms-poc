@@ -11,25 +11,51 @@
 <body>
   <h1>mavo cms PoC</h1>
 
-  <p>powered by <a href="http://mavo.io" target="_blank">mavo.io</a></p>
-  <p>code at <a href="https://github.com/openmindculture/mavo-cms-poc">github.com/openmindculture/mavo-cms-poc</a></p>
-  <p>example at <a href="https://mavo.open-mind-culture.org/">mavo.open-mind-culture.org</a></p>
+  <a href="#credits">credits</a> |
+  <a href="#basic">basic example</a> |
+  <a href="#github">github storage example</a>
 
-  <h2>basic examples with local storage</h2>
-    <div mv-app="storageTest" mv-storage="local">
-      My first Mavo app!
-    </div>
+  <hr>
 
-    <div mv-app="nameDemo" mv-storage="local">
-      Name:
-      <span property="firstName">Lea</span>
-      <span property="last_name">Verou</span>
-    </div>
+  <section id="credits">
+    <p>powered by <a href="http://mavo.io" target="_blank">mavo.io</a></p>
+    <p>code at <a href="https://github.com/openmindculture/mavo-cms-poc">github.com/openmindculture/mavo-cms-poc</a></p>
+    <p>example at <a href="https://mavo.open-mind-culture.org/">mavo.open-mind-culture.org</a></p>
+  </section>
+  <hr>
+
+  <h2 id="github">storage in github</h2>
+  <ul>
+    <li>user must be logged in to github</li>
+    <li>contributors can commit directly</li>
+    <li>others will save as pull requests</li>
+    <li>see <a href="http://mavo.io/docs/storage/" target="_blank">mavo.io/docs/storage/</a></li>
+  </ul>
+
+  <div mv-app="mavo-openmindculture-cms-poc" mv-storage="https://github.com/openmindculture/mavo-cms-poc">
+    Name:
+    <span property="firstName">Ingo</span>
+    <span property="last_name">Steinke</span>
+    <article property="description">Description...</article>
+  </div>
+  <hr>
+
+  <h2 id="basic">basic examples with local storage</h2>
+  <div mv-app="mavo-openmindculture-storagetest" mv-storage="local">
+    My first Mavo app!
+  </div>
+
+  <div mv-app="mavo-openmindculture-namedemo" mv-storage="local">
+    Name:
+    <span property="firstName">Lea</span>
+    <span property="last_name">Verou</span>
 
     <article property="pet" mv-multiple>
-      <h1 property="name">Adam Catlace</h1>
+      <h3 property="name">Adam Catlace</h3>
       Born on
       <time property="birthday" datetime="2014-06-01">1 Jun 2014</time>
     </article>
+  </div>
+  <hr>
 </body>
 </html>
